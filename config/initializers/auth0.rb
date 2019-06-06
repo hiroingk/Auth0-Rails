@@ -6,7 +6,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       Rails.application.credentials.dig(:auth0, :domain),
       callback_path: '/auth/auth0/callback',
       authorize_params: {
-          scope: 'openid profile'
+          scope: 'openid profile',
+          language: 'ja'
       }
   )
 end
